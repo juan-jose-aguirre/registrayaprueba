@@ -18,6 +18,12 @@ let empleados = [
         imagenUrl: "./empleados/gabriel_malpud.jpg",
         cedula: 1009,
         nombreCompleto: "Gabriel Malpud"
+    },
+    {
+        id: 4,
+        imagenUrl: "./empleados/alain_rivera.jpeg",
+        cedula: 1010,
+        nombreCompleto: "Alain Rivera"
     }
 ]
 
@@ -98,15 +104,15 @@ const run = async () => {
             }
 
             // Mostrar mensaje de confirmación
-            if (label !== "Desconocido") {
-                const confirmMessage = `¿Es la persona en la cámara ${label}?`;
-                if (confirm(confirmMessage)) {
-                    await registrarEnBaseDeDatos(empleadoId);
-                    reconocimientoActivo = false; // Detener el reconocimiento
-                    clearInterval(deteccionInterval); // Detener el intervalo
-                    return; // Salir de la función
-                }
-            }
+            // if (label !== "Desconocido") {
+            //     const confirmMessage = `¿Es la persona en la cámara ${label}?`;
+            //     if (confirm(confirmMessage)) {
+            //         await registrarEnBaseDeDatos(empleadoId);
+            //         reconocimientoActivo = false; // Detener el reconocimiento
+            //         clearInterval(deteccionInterval); // Detener el intervalo
+            //         return; // Salir de la función
+            //     }
+            // }
 
             // Validación y etiquetado
             const options = { label };
